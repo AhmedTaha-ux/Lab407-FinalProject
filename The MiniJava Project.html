@@ -1,0 +1,367 @@
+﻿<html lang="en"><head>
+<base href="http://www.cambridge.org/resources/052182060X/MCIIJ2e/">
+
+<title>The MiniJava Project</title>
+<meta name="description" content="MiniJava Project Homepage">
+<meta name="author" content="Vidyut Samanta">
+<meta name="keywords" content="Compiler, Modern Compiler Implimentation,
+                       Java, Andrew, Appel, Jens, Paslberg, cambridge ">
+<meta name="title" content="The MiniJava Project">
+<meta name="content-language" content="en">
+<meta name="language" content="en">
+<meta name="date" content="2002-06-05">
+<meta name="rights" content="(C) 2002 by Vidyut Samanta">
+<style><!--
+.f0:link,.f0:visited{color:#ffffff}
+.fl:link,.fl:visited{color:#6f6f6f}
+//-->
+</style>
+<link rel="SHORTCUT ICON" data-savepage-href="favicon.ico" href="data:text/html;resource=0;base64,">
+<style></style>
+<script id="savepage-pageloader" type="application/javascript">
+savepage_PageLoader(5);
+"use strict";function savepage_PageLoader(maxframedepth){var resourceMimeType=new Array();var resourceBase64Data=new Array();var resourceBlobUrl=new Array();window.addEventListener("DOMContentLoaded",function(a){createBlobURLs();replaceReferences(0,document.documentElement)},false);function createBlobURLs(){var i,j,binaryString,blobData;var a=new Array();for(i=0;i<resourceMimeType.length;i++){if(typeof resourceMimeType[i]!="undefined"){binaryString=atob(resourceBase64Data[i]);resourceBase64Data[i]="";a.length=0;for(j=0;j<binaryString.length;j++){a[j]=binaryString.charCodeAt(j)}blobData=new Blob([new Uint8Array(a)],{type:resourceMimeType[i]});resourceMimeType[i]="";resourceBlobUrl[i]=window.URL.createObjectURL(blobData)}}}function replaceReferences(a,b){var i,regex1,regex2,csstext,blobData;regex1=/url\(\s*(?:'|")?data:[^;]*;resource=(\d+);base64,(?:'|")?\s*\)/gi;regex2=/data:[^;]*;resource=(\d+);base64,/i;if(b.hasAttribute("style")){csstext=b.style.cssText;b.style.cssText=csstext.replace(regex1,replaceCSSRef)}if(b.localName=="style"){csstext=b.textContent;b.textContent=csstext.replace(regex1,replaceCSSRef)}else if(b.localName=="link"&&(b.rel.toLowerCase()=="icon"||b.rel.toLowerCase()=="shortcut icon")){if(b.href!="")b.href=b.href.replace(regex2,replaceRef)}else if(b.localName=="body"){if(b.background!="")b.background=b.background.replace(regex2,replaceRef)}else if(b.localName=="img"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}else if(b.localName=="input"&&b.type.toLowerCase()=="image"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}else if(b.localName=="audio"){if(b.src!=""){b.src=b.src.replace(regex2,replaceRef);b.load()}}else if(b.localName=="video"){if(b.src!=""){b.src=b.src.replace(regex2,replaceRef);b.load()}if(b.poster!="")b.poster=b.poster.replace(regex2,replaceRef)}else if(b.localName=="source"){if(b.src!=""){b.src=b.src.replace(regex2,replaceRef);b.parentElement.load()}}else if(b.localName=="track"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}else if(b.localName=="object"){if(b.data!="")b.data=b.data.replace(regex2,replaceRef)}else if(b.localName=="embed"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}if(b.localName=="iframe"||b.localName=="frame"){if(a<maxframedepth){if(b.hasAttribute("data-savepage-sameorigin")){blobData=new Blob([decodeURIComponent(b.src.substr(29))],{type:"text/html;charset=utf-8"});b.onload=function(){try{if(b.contentDocument.documentElement!=null){replaceReferences(a+1,b.contentDocument.documentElement)}}catch(e){}};b.src=window.URL.createObjectURL(blobData)}}}else{for(i=0;i<b.children.length;i++)if(b.children[i]!=null)replaceReferences(a,b.children[i])}}function replaceCSSRef(a,b,c,d){return"url("+resourceBlobUrl[+b]+")"}function replaceRef(a,b,c,d){return resourceBlobUrl[+b]}
+resourceMimeType[0] = "text/html"; resourceBase64Data[0] = "CjwhRE9DVFlQRSBodG1sIFBVQkxJQyAiLS8vVzNDLy9EVEQgWEhUTUwgMS4wIFRyYW5zaXRpb25hbC8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9UUi94aHRtbDEvRFREL3hodG1sMS10cmFuc2l0aW9uYWwuZHRkIj4KPGh0bWwgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHhtbDpsYW5nPSJlbiIgbGFuZz0iZW4iPgo8aGVhZD4KPG1ldGEgaHR0cC1lcXVpdj0iY29udGVudC10eXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMSIgLz4KPHRpdGxlPkNhbWJyaWRnZSBVbml2ZXJzaXR5IFByZXNzPC90aXRsZT4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCkBpbXBvcnQgdXJsKC9jc3MvZXJyb3Ivc3R5bGVzLmNzcyk7DQo8L3N0eWxlPgoKPHNjcmlwdCBsYW5ndWFnZT0iSmF2YVNjcmlwdCI+DQo8IS0tDQpmdW5jdGlvbiBwdXRWYWx1ZXMoKXsNCglpZiAoZG9jdW1lbnQuZm9ybVNlYXJjaC5zZWFyY2hUeXBlWzBdLmNoZWNrZWQpIHsNCgkJZG9jdW1lbnQuZm9ybVNlYXJjaC5hY3Rpb249Ii9hc2lhL2NhdGFsb2d1ZS9zZWFyY2hSZXN1bHQuYXNwIjsJCQ0KCX1lbHNlew0KCQlkb2N1bWVudC5mb3JtU2VhcmNoLmFjdGlvbj0iL2FzaWEvam91cm5hbHMvam91cm5hbF9zZWFyY2hfcmVzdWx0cy5hc3AiOw0KCX0NCgkNCglkb2N1bWVudC5mb3JtU2VhcmNoLmNyaXRlcmlhLnZhbHVlID0gZG9jdW1lbnQuZm9ybVNlYXJjaC5zZWFyY2hCb3gudmFsdWU7DQoJZG9jdW1lbnQuZm9ybVNlYXJjaC50aXRsZS52YWx1ZSA9IGRvY3VtZW50LmZvcm1TZWFyY2guc2VhcmNoQm94LnZhbHVlOw0KfQ0KLy8tLT4NCjwvc2NyaXB0PgoKPC9oZWFkPgo8Ym9keT4KCjx0YWJsZSBpZD0ic3RyaXAiIGNlbGxzcGFjaW5nPSIwIj4KPHRyIGJnY29sb3I9IiMwMDAwNjYiPgo8dGQgd2lkdGg9IjEzMCI+PGEgaHJlZj0iLyIgdGl0bGU9IkdvIGJhY2sgdG8gdGhlIENhbWJyaWRnZSBob21lcGFnZSI+PGltZyBzcmM9Ii9pbWFnZXMvY29tbW9uL2xvZ28vMDAwMDY2LmdpZiIgd2lkdGg9IjEzMCIgaGVpZ2h0PSIzNyIgYWx0PSJDYW1icmlkZ2UiPjwvYT48L3RkPgo8dGQgd2lkdGg9IjMxMCI+PGEgaHJlZj0iLyI+PGltZyBzcmM9Ii9hc3NldHMvY29tbW9uL3RpdGxlcy9lcnJvcl90aXRsZS5naWYiIHdpZHRoPSIzMTAiIGhlaWdodD0iMzciIGJvcmRlcj0iMCIgYWx0PSJQYWdlIG5vdCBmb3VuZCIgLz48L2E+PC90ZD4KPHRkIHdpZHRoPSI5OSUiIGlkPSJzaGFkb3ciPiZuYnNwOzwvdGQ+Cjx0ZCB3aWR0aD0iODAiIHZhbGlnbj0iYm90dG9tIiBub3dyYXA9Im5vd3JhcCIgYmdjb2xvcj0iIzAzNiI+PGEgaHJlZj0iL2FzaWEvY2F0YWxvZ3VlL3ZpZXdCYXNrZXQuYXNwIiB0aXRsZT0iVmlldyB0aGUgY29udGVudHMgb2YgeW91ciBiYXNrZXQgb3IgcGxhY2UgeW91ciBvcmRlciI+PGltZyBzcmM9Ii9pbWFnZXMvY29tbW9uL3N0cmlwL2Jhc2tldF8wMDAwNjYuZ2lmIiB3aWR0aD0iMzIiIGhlaWdodD0iMjAiIGJvcmRlcj0iMCIgYWx0PSJWaWV3IGJhc2tldCIgLz48L2E+PC90ZD4KPC90cj4KPC90YWJsZT4KCjxkaXYgaWQ9ImxvY2F0aW9uIj48YSBocmVmPSJodHRwOi8vd3d3LmNhbWJyaWRnZS5vcmciPkhvbWU8L2E+ICZndDsgUGFnZSBub3QgZm91bmQgPC9kaXY+Cjx0YWJsZSBpZD0iY29udGVudCIgY2VsbHNwYWNpbmc9IjAiPgo8dHI+Cjx0ZCBpZD0ibGVmdCI+CjxkaXYgaWQ9InNlYXJjaCI+CjxoMj5RdWljayBzZWFyY2g8L2gyPgo8Zm9ybSBtZXRob2Q9InBvc3QiIGFjdGlvbj0iL2FzaWEvY2F0YWxvZ3VlL3NlYXJjaFJlc3VsdC5hc3AiIG5hbWU9ImZvcm1TZWFyY2giIG9uc3VibWl0PSJwdXRWYWx1ZXMoKTsiPgo8aW5wdXQgbmFtZT0iY3JpdGVyaWEiIGNsYXNzPSJzZWFyY2hfZmllbGQiIG1heGxlbmd0aD0iMzAiIHR5cGU9ImhpZGRlbiI+CjxpbnB1dCBuYW1lPSJ0aXRsZSIgY2xhc3M9InNlYXJjaF9maWVsZCIgbWF4bGVuZ3RoPSIzMCIgdHlwZT0iaGlkZGVuIj4KPGlucHV0IG5hbWU9InNlYXJjaEJveCIgY2xhc3M9InNlYXJjaF9maWVsZCIgbWF4bGVuZ3RoPSIzMCI+CjxpbnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVlPSJTZWFyY2giIGNsYXNzPSJidXR0b24iIG5hbWU9IlNlYXJjaCI+Cjx1bD4KPGxpPjxpbnB1dCB0eXBlPSJyYWRpbyIgQ0hFQ0tFRCB2YWx1ZT0icHJvZHVjdCIgbmFtZT0ic2VhcmNoVHlwZSI+Qm9vazogSVNCTiwgVGl0bGUsIEF1dGhvcjwvbGk+CjxsaT48aW5wdXQgdHlwZT0icmFkaW8iIHZhbHVlPSJqb3VybmFsIiBuYW1lPSJzZWFyY2hUeXBlIj5Kb3VybmFsOiBJU1NOLCBUaXRsZTwvbGk+CjwvdWw+CjwvZm9ybT4KPHA+PGEgaHJlZj0iL2FzaWEvY2F0YWxvZ3VlL3NlYXJjaC5hc3AiPkFkdmFuY2VkIHNlYXJjaC4uLjwvYT48L3A+CjwvZGl2PgoKPGRpdiBpZD0iYnJvd3NlLWJvb2tzIj4KPGgyPkJyb3dzZSBib29rcyBhbmQgQ0QtUk9NczwvaDI+Cjx1bD4KPGxpPjxhIGhyZWY9Ii9oc3MvIj5IdW1hbml0aWVzICZhbXA7IFNvY2lhbCBTY2llbmNlczwvYT48L2xpPgo8bGk+PGEgaHJlZj0iL3N0bS8iPlNjaWVuY2UsIFRlY2hub2xvZ3kgYW5kIE1lZGljaW5lPC9hPjwvbGk+CjxsaT48YSBocmVmPSIvaHNzL2xhdy8iPkxhdzwvYT48L2xpPgo8bGk+PGEgaHJlZj0iL3VrL2VkdWNhdGlvbi8iPlNjaG9vbHMgYW5kIENvbGxlZ2VzPC9hPjwvbGk+CjxsaT48YSBocmVmPSIvZWx0LyI+RW5nbGlzaCBMYW5ndWFnZSBUZWFjaGluZzwvYT48L2xpPgo8bGk+PGEgaHJlZj0iaHR0cDovL2RpY3Rpb25hcnkuY2FtYnJpZGdlLm9yZy8iPkNhbWJyaWRnZSBEaWN0aW9uYXJpZXMgT25saW5lPC9hPjwvbGk+CjxsaT48YSBocmVmPSIvdWsvYmlibGVzLyI+QmlibGVzPC9hPjwvbGk+CjwvdWw+CjwvZGl2PgoKPGRpdiBpZD0iYnJvd3NlLWpvdXJuYWxzIj4KPGgyPkJyb3dzZSBqb3VybmFsczwvaDI+Cjx1bD4KPGxpPjxhIGhyZWY9Imh0dHA6Ly9qb3VybmFscy5jYW1icmlkZ2Uub3JnL2Jpbi9ibGFkZXJ1bm5lcj9SRVFVTklRPTEwODYxNzAyNjEmMzBSRVFFVkVOVD0mUkVRSU5UMT0xNDU1OTkmUkVRQVVUSD0wIj5DYW1icmlkZ2UgSm91cm5hbHMgT25saW5lPC9hPjwvbGk+CjxsaT48YSBocmVmPSIvYXNpYS9qb3VybmFscy8iPlN1YnNjcmlwdGlvbiBhbmQgZWRpdG9yaWFsIGluZm9ybWF0aW9uPC9hPjwvbGk+CjwvdWw+CjwvZGl2PgoKPGRpdiBpZD0ic2VydmljZXMiPgo8aDI+U2VydmljZXM8L2gyPgo8dWw+CjxsaT4KPGgzPjxhIGhyZWY9Imh0dHBzOi8vYm9va3RyYWRlLmNhbWJyaWRnZS5vcmcvZGVmYXVsdC5hc3AiPkJvb2tzZWxsZXJzPC9hPjwvaDM+CjxoND5NYW5hZ2UgdHJhZGUgYWNjb3VudHMgYW5kIHBsYWNlIG9yZGVyczwvaDQ+CjwvbGk+CjxsaT4KPGgzPjxhIGhyZWY9Imh0dHA6Ly9kYXRhc2hvcC5jYW1icmlkZ2Uub3JnL2xvZ2luLmFzcCI+RGF0YVNob3A8L2E+PC9oMz4KPGg0PkRvd25sb2FkIHNhbXBsZXMsIGNvdmVycyBhbmQgYmlibGlvZ3JhcGhpYyBkYXRhIGZyZWU8L2g0Pgo8L2xpPgo8bGk+CjxoMz48YSBocmVmPSJodHRwczovL2F1dGhvcm5ldC5jYW1icmlkZ2Uub3JnL2RlZmF1bHQuYXNwIj5BdXRob3JzPC9hPjwvaDM+CjxoND5WaWV3IHN1Ym1pc3Npb24gZ3VpZGVsaW5lcyBhbmQgb3JkZXIgb25saW5lPC9oND4KIDwvbGk+CjxsaT4KPGgzPjxhIGhyZWY9Ii90ZXh0Ym9va3MvIj5Vbml2ZXJzaXR5IExlY3R1cmVyczwvYT48L2gzPgo8aDQ+UmVxdWVzdCBpbnNwZWN0aW9uIGNvcGllczwvaDQ+CjwvbGk+CjxsaT4KPGgzPjxhIGhyZWY9Ii9yaWdodHMvIj5SaWdodHMgYW5kIFBlcm1pc3Npb25zPC9hPjwvaDM+CjwvbGk+CjxsaT4KPGgzPjxhIGhyZWY9Imh0dHA6Ly93d3cuY2FtYnJpZGdlcHJpbnRpbmcub3JnLyI+Q2FtYnJpZGdlIFByaW50aW5nPC9hPjwvaDM+CjxoND5UaGUgUHJpbnRpbmcgQnVzaW5lc3MgYXQgQ2FtYnJpZGdlPC9oND4KPC9saT4KPC91bD4KPC9kaXY+Cgo8ZGl2IGlkPSJhbGVydHMiPgo8aDI+U3Vic2NyaWJlIHRvIENhbWJyaWRnZSBBbGVydHM8L2gyPgo8cD5SZWNlaXZlIDxhIGhyZWY9Imh0dHA6Ly93d3czLmNhbWJyaWRnZS5vcmcvYWxlcnRzLyI+bW9udGhseSB1cGRhdGVzIDwvYT5vZiBvdXIgbmV3IHRpdGxlcyBhbmQgc3BlY2lhbCBvZmZlcnM8L3A+CjwvZGl2PgoKPC90ZD4KCjx0ZCBpZD0iY2VudHJlIj4KPGgxPkNhbWJyaWRnZSBVbml2ZXJzaXR5IFByZXNzIC0gUGFnZSBub3QgZm91bmQ8L2gxPgo8cCBpZD0iYWJvdXQiPgpUaGUgcGFnZTogPGI+cmVzb3VyY2VzLzA1MjE4MjA2MHgvbWNpaWoyZS9mYXZpY29uLmljbzwvYj4Kd2FzIG5vdCBmb3VuZC4gUGxlYXNlIHJldHlwZSB5b3VyIFVSTCwgb3IgYnJvd3NlIGJ5IHVzaW5nIGFueSBvZiB0aGUgbGlua3Mgb24gdGhpcyBwYWdlLjwvcD4KPHA+PGEgaHJlZj0iL2F0b3ovIj5BIHRvIFo8L2E+PC9wPgo8cD48YSBocmVmPSIvYXNpYS9jYXRhbG9ndWUvc2VhcmNoLmFzcCI+QWR2YW5jZWQgc2VhcmNoPC9hPjwvcD4KPC90ZD4KCjwvdHI+CjwvdGFibGU+CgoKPGRpdiBpZD0iZm9vdGVyIj48YSBocmVmPSIvY29weXJpZ2h0LyI+JmNvcHk7PC9hPiBDYW1icmlkZ2UgVW5pdmVyc2l0eSBQcmVzcyA8c2NyaXB0IGxhbmd1YWdlPSJqYXZhc2NyaXB0IiBzcmM9Ii9kYXRlL3dyaXRlWWVhcl9qcy5hc3AiPjwvc2NyaXB0Pi4gPGEgaHJlZj0iL3BvbGljeS9wcml2YWN5LyI+UHJpdmFjeSBQb2xpY3k8L2E+IHwgPGEgaHJlZj0iL2F0b3ovIj5BIHRvIFo8L2E+PC9kaXY+CjwvYm9keT4KPC9odG1sPg==";
+}
+</script>
+<meta name="savepage-url" content="http://www.cambridge.org/resources/052182060X/MCIIJ2e/">
+<meta name="savepage-title" content="The MiniJava Project">
+<meta name="savepage-date" content="Tue Apr 17 2018 00:55:26 GMT+0200 (Egypt Standard Time)">
+<meta name="savepage-state" content="Standard Items; Used page loader; Retained cross-origin frames; Removed unsaved URLs; Max frame depth = 5; Max resource size = 50MB; Max resource time = 10s;">
+<meta name="savepage-version" content="9.5">
+<meta name="savepage-comments" content="">
+</head>
+<body bgcolor="#FFFFFF" topmargin="0" link="336699" vlink="336699" style="">
+<table width="80%" border="0" cellpadding="3" cellspacing="0">
+
+<tbody><tr bgcolor="336699">
+<td nowrap="" align="center"><b>
+<font color="#FFFFFF" face="Arial, sans-serif">Modern Compiler Implementation in Java, Second Edition - <i>The MiniJava Project</i></font></b></td>
+</tr>
+
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="0" align="left">
+<tbody><tr>
+
+<td valign="top">
+<table width="15%" border="0" cellpadding="1" cellspacing="3">
+<tbody><tr bgcolor="336699"> <td nowrap=""> <a class="f0" href="grammar.html"><b>Grammar</b></a></td></tr>
+<tr bgcolor="336699"> <td nowrap=""> <a class="f0" href="#Progs"><b>Programs</b></a></td></tr>
+<tr bgcolor="336699"> <td nowrap=""> <a class="f0" href="#Framework"><b>Framework</b></a></td></tr>
+<tr bgcolor="336699"> <td nowrap=""> <a class="f0" href="#Software"><b>Software</b></a></td></tr>
+<tr bgcolor="336699"> <td nowrap=""> <a class="f0" href="#Java"><b>Java Reference</b></a></td></tr>
+<tr bgcolor="336699"> <td nowrap=""> <a class="f0" href="MJreference"><b>MiniJava Reference</b></a></td></tr>
+</tbody></table>
+</td>
+
+<td width="2" bgcolor="#efefef">
+<img width="1" height="140" border="0">
+</td>
+
+<td valign="top">
+<table border="0" cellpadding="3" cellspacing="3">
+<tbody><tr bgcolor="#efefef"> <td> <font face="Arial, sans-serif">
+</font><p><font face="Arial, sans-serif"> <b><a name="Desc"> What is Mini-Java? </a></b> </font>
+</p></td></tr>
+<tr> <td valign="top">
+<p> MiniJava is a subset of Java. The meaning of a MiniJava program is
+given by its meaning as a Java program. Overloading is not allowed
+in MiniJava. The MiniJava statement System.out.println( ... ); can
+only print integers. The MiniJava expression e.length only applies to
+expressions of type int [].
+</p><p> The Grammar link on the left has the formal BNF for MiniJava. You
+can also view some sample MiniJava programs under the Programs link.
+The Framework link provides a helpful interface to write a MiniJava
+Compiler. The software link has links to software and tools that may be
+helpful to write and test your compiler. The Java Reference is a helpful
+resource to learn the language. And the MiniJava Reference is a miniJava
+reference manual from the appendix of the book.
+</p><p> (C) MiniJava project by Joao Cangussu, Jens Palsberg and Vidyut Samanta.
+</p></td>
+</tr>
+
+<tr bgcolor="#efefef">
+<td> <font face="Arial, sans-serif">
+</font><p><font face="Arial, sans-serif"><b><a name="Progs">Sample MiniJava Programs </a></b> </font>
+</p></td>
+</tr>
+<tr>
+<td valign="top">
+<p> The following are some sample MiniJava programs that you may
+use to test the correctness of your compiler. All of these programs
+can be compiled with <i>javac</i> and output compared with your results.
+<br>
+</p><ul>
+<li><strong><a href="programs/Factorial.java">Factorial.java</a></strong>
+</li><li><strong><a href="programs/BinarySearch.java">BinarySearch.java</a></strong>
+</li><li><strong><a href="programs/BubbleSort.java">BubbleSort.java</a></strong>
+</li><li><strong><a href="programs/TreeVisitor.java">TreeVisitor.java</a></strong>
+</li><li><strong><a href="programs/QuickSort.java">QuickSort.java</a></strong>
+</li><li><strong><a href="programs/LinearSearch.java">LinearSearch.java</a></strong>
+</li><li><strong><a href="programs/LinkedList.java">LinkedList.java</a></strong>
+</li><li><strong><a href="programs/BinaryTree.java">BinaryTree.java</a></strong>
+</li></ul>
+<br>
+</td>
+</tr>
+
+<tr bgcolor="#efefef">
+<td> <font face="Arial, sans-serif">
+<b><a name="Framework">Framework </a></b> </font>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>The links below provide a helpful framework for writing a MiniJava
+compiler, and are organized according to the chapters in the book.
+</p><ol>
+<li><strong>Introduction</strong> </li>
+<li><strong><a href="chap2">Lexical Analysis</a></strong>:
+<a href="chap2/javacc">javacc</a>
+<a href="chap2/sablecc">sablecc</a>
+<a href="chap2/README">README</a>
+</li>
+<li><strong>Parsing</strong>:
+<a href="chap3/README">README</a>
+</li>
+<li><strong><a href="chap4">Abstract Syntax</a></strong>:
+<a href="chap4/handcrafted">handcrafted</a>
+<a href="chap4/README">README</a>
+</li>
+<li><strong>Type Checking</strong>
+<a href="chap5/README">README</a>
+</li>
+<li><strong><a href="chap6">Activation Records</a></strong>:
+<a href="chap6/Temp">Temp</a> <a href="chap6/Util">Util</a>
+<a href="chap6/README">README</a>
+</li>
+<li><strong><a href="chap7">Translation to Intermediate
+Representation</a></strong>:
+<a href="chap7/Tree">Tree</a>
+<a href="chap7/README">README</a>
+</li>
+<li><strong><a href="chap8">Canonical Trees</a></strong>:
+<a href="chap8/Canon">Canon</a>
+</li>
+<li><strong><a href="chap9">Instruction Selection</a></strong>:
+<a href="chap9/Assem">Assem</a> <a href="chap9/Canon">Canon</a>
+<a href="chap9/README">README</a>
+</li>
+<li><strong><a href="chap10">Dataflow Analysis</a></strong>
+<a href="chap10/FlowGraph">FlowGraph</a>
+<a href="chap10/Graph">Graph</a>
+<a href="chap10/RegAlloc">RegAlloc</a>
+<a href="chap10/README">README</a>
+</li>
+<li><strong>Register Allocation</strong>
+<a href="chap11/README">README</a>
+</li>
+<li><strong><a href="chap12">Putting It All Together</a></strong>:
+<a href="chap12/runtime.c">runtime</a>
+<a href="chap12/README">README</a>
+</li>
+</ol>
+<p> Here is a sample <a href="Main.java">main program</a> that could be
+used to link everything together.
+
+</p></td></tr><tr bgcolor="#efefef">
+<td> <font face="Arial, sans-serif">
+<b><a name="Software">Software </a></b> </font>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<ul>
+<li><strong><a href="http://http://java.sun.com/j2se/">Java (tm) Developers Kit</a></strong>
+</li><li><strong><a href="http://www.webgain.com/products/java_cc/">JavaCC</a></strong> (a Java parser generator.)
+</li><li><strong><a href="http://www.cs.purdue.edu/jtb/">Java Tree Builder</a></strong> (a syntax tree builder to be used with JavaCC)
+</li><li><strong><a href="http://www.sablecc.org/">SableCC</a></strong> (an LALR(1) parser and AST builder generator.)
+</li><li><strong><a href="http://www.cs.wisc.edu/~larus/spim.html">Spim</a></strong> (A MIPS R2000/R3000 Simulator)
+</li></ul>
+</td>
+</tr>
+
+<tr bgcolor="#efefef">
+<td> <font face="Arial, sans-serif">
+<b><a name="Java">Java Reference</a></b> </font>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>The following links provide a good resource for learning Java:
+</p><ul>
+<li><strong><a href="http://java.sun.com/docs/books/tutorial/index.html">Java Tutorial</a></strong>
+</li><li><strong><a href="http://java.sun.com/j2se/1.4/docs/index.html">Java Documentation</a></strong>
+</li><li><strong><a href="http://java.sun.com/j2se/1.4/docs/api/index.html">Java API</a></strong>
+</li></ul>
+</td>
+</tr>
+
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+<html>
+    
+    <div id="savepage-pageinfo-bar-container">
+        
+        <style id="savepage-pageinfo-bar-style" type="text/css">
+            
+            #savepage-pageinfo-bar,
+            #savepage-pageinfo-bar *
+            {
+                all: initial !important;
+            }
+            
+            #savepage-pageinfo-bar,
+            #savepage-pageinfo-bar *
+            {
+                font-family: "Segoe UI","Helvetica Neue",Ubuntu,Arial !important;
+                font-size: 12px !important;
+                color: black !important;
+                cursor: default !important;
+                -moz-user-select: none !important;
+                -webkit-user-select: none !important;
+            }
+            
+            #savepage-pageinfo-bar
+            {
+                display: flex !important;
+                position: fixed !important;
+                left: 0px !important;
+                top: 0px !important;
+                width: 100% !important;
+                height: 25px !important;
+                border-bottom: 1px solid #E0E0E0 !important;
+                background: #F8F8F8 !important;
+                overflow: hidden !important;
+                z-index: 2147483645 !important;
+            }
+            
+            #savepage-pageinfo-bar-spacer-1
+            {
+                flex: 0 1 auto !important;
+                background: #F8F8F8 !important;
+            }
+            
+            #savepage-pageinfo-bar-link-box
+            {
+                flex: 0 1 auto !important;
+                padding: 4px 0px !important;
+                background: #F8F8F8 !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+            }
+            
+            #savepage-pageinfo-bar-link
+            {
+                padding: 4px 0px !important;
+                background: #F8F8F8 !important;
+                color: #6060E0 !important;
+                white-space: nowrap !important;
+            }
+            
+            #savepage-pageinfo-bar-link:hover
+            {
+                text-decoration: underline !important;
+            }
+            
+            #savepage-pageinfo-bar-spacer-2
+            {
+                flex: 1 1 auto !important;
+                background: #F8F8F8 !important;
+            }
+            
+            #savepage-pageinfo-bar-datetime
+            {
+                flex: 0 1000000 auto !important;
+                min-width: 0px !important;
+                padding: 4px 0px !important;
+                background: #F8F8F8 !important;
+                white-space: nowrap !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+            }
+            
+            #savepage-pageinfo-bar-spacer-3
+            {
+                flex: 0 1 auto !important;
+                background: #F8F8F8 !important;
+            }
+            
+            #savepage-pageinfo-bar-button-box
+            {
+                flex: 0 0 auto !important;
+                padding: 3px !important;
+                border-left: 1px solid #E0E0E0 !important;
+                border-right: 1px solid #E0E0E0 !important;
+                background: #F8F8F8 !important;
+            }
+            
+            #savepage-pageinfo-bar-button
+            {
+                padding: 0px 5px !important;
+                border: 1px solid #E2E2E2 !important;
+                background: #F2F2F2 !important;
+                font-size: 12px !important;
+            }
+            
+            #savepage-pageinfo-bar-button:hover
+            {
+                background: #E2E2E2 !important;
+            }
+            
+            #savepage-pageinfo-bar-button:active
+            {
+                background: #D2D2D2 !important;
+            }
+            
+            
+        </style>
+        
+        <div id="savepage-pageinfo-bar">
+            
+            <div id="savepage-pageinfo-bar-spacer-1">&nbsp;&nbsp;&nbsp;</div>
+            
+            <div id="savepage-pageinfo-bar-link-box">
+                
+                <a id="savepage-pageinfo-bar-link" href="http://www.cambridge.org/resources/052182060X/MCIIJ2e/" target="_blank">http://www.cambridge.org/resources/052182060X/MCIIJ2e/</a>
+                
+            </div>
+            
+            <div id="savepage-pageinfo-bar-spacer-2">&nbsp;&nbsp;&nbsp;</div>
+            
+            <div id="savepage-pageinfo-bar-datetime">17 Apr 2018&nbsp;&nbsp;&nbsp;00:55:26</div>
+            
+            <div id="savepage-pageinfo-bar-spacer-3">&nbsp;&nbsp;&nbsp;</div>
+            
+            <div id="savepage-pageinfo-bar-button-box">
+                
+                <div id="savepage-pageinfo-bar-button">X</div>
+                
+            </div>
+            
+        </div>
+        
+        <script  id="savepage-pageinfo-bar-script" type="application/javascript">
+            
+            document.getElementById("savepage-pageinfo-bar-button").addEventListener("click",
+            function(event)
+            {
+                document.getElementById("savepage-pageinfo-bar-container").parentNode.removeChild(document.getElementById("savepage-pageinfo-bar-container"));
+            },false);
+            
+        </script>
+        
+    </div>
+    
+</html>
+</body></html>
