@@ -1,7 +1,7 @@
 grammar FinalProject;
 
 //parse
-goal:( WS* mainClass WS* ( WS* comment* WS* classDeclaration WS*)* );
+goal:( WS* mainClass WS* (comment* WS* classDeclaration WS*)* );
 
 mainClass:(	'class' WS* Identifier WS* '{' WS* 'public' WS* 'static' WS* 'void' WS* 'main' WS*
 '(' WS* 'String' WS* '[' WS* ']' WS* Identifier WS* ')' WS* '{' WS* (statement)* WS* '}' WS* '}' WS* );
@@ -45,7 +45,6 @@ comment: '//' WS* ('('? WS* Identifier WS* ')'? WS*|
 'if' WS* Identifier WS* | 'class' WS* Identifier WS*)*;
 
 //Tokens
-Class:'class';
 Identifier:('a'..'z'|'A'..'Z'|'_'|'$')+('0'..'9'|'a'..'z'|'A'..'Z'|'_'|'$')*;
 Operator:('&&' |'<' | '+' | '-' | '*');
 INTEGER_LITERAL:('0'..'9')+;
